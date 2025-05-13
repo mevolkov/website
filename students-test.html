@@ -61,36 +61,98 @@
         <p>Проверь свои знания о безопасном поведении в интернете!</p>
         
         <form id="quiz-form">
-            <div class="question">
-                <p>1. Что нужно сделать, если тебе пришло сообщение от незнакомца с подозрительной ссылкой?</p>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="A"> Перейти по ссылке из любопытства</label>
-                    <label><input type="radio" name="q1" value="B"> Удалить сообщение и не отвечать</label>
-                    <label><input type="radio" name="q1" value="C"> Отправить ссылку друзьям</label>
-                </div>
-            </div>
-            
-            <div class="question">
-                <p>2. Какой пароль самый надежный?</p>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="A"> 123456</label>
-                    <label><input type="radio" name="q2" value="B"> Шк0ла#2023!</label>
-                    <label><input type="radio" name="q2" value="C"> qwerty</label>
-                </div>
-            </div>
-            
-            <!-- Остальные вопросы -->
-            <div class="question">
-                <p>10. Что делать, если тебя обижают в интернете?</p>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="A"> Обидеть в ответ</label>
-                    <label><input type="radio" name="q10" value="B"> Никому не говорить</label>
-                    <label><input type="radio" name="q10" value="C"> Рассказать родителям или учителю</label>
-                </div>
-            </div>
-            
-            <button type="button" id="check-test">Проверить результаты</button>
-        </form>
+    <div class="question">
+        <p>1. 📩 Тебе пришло сообщение от друга со ссылкой "Посмотри это крутое видео!". Что сделаешь?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="A"> Немедленно перейду по ссылке</label>
+            <label><input type="radio" name="q1" value="B"> Спрошу у друга, что за ссылка, перед переходом</label>
+            <label><input type="radio" name="q1" value="C"> Поделюсь ссылкой в групповом чате</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>2. 🔐 Какой пароль самый надежный для школьного аккаунта?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="A"> 123456789</label>
+            <label><input type="radio" name="q2" value="B"> Moscow2023</label>
+            <label><input type="radio" name="q2" value="C"> Шк0ла#Без0пасность!</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>3. 📸 Новый знакомый в интернете просит твое фото. Как поступишь?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="A"> Отправлю свое последнее селфи</label>
+            <label><input type="radio" name="q3" value="B"> Отправлю фото своей собаки вместо своего</label>
+            <label><input type="radio" name="q3" value="C"> Откажусь и прекращу общение</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>4. 💻 Ты зашел на сайт, который требует ввести школьный логин и пароль. Что проверишь в первую очередь?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="A"> Дизайн сайта</label>
+            <label><input type="radio" name="q4" value="B"> Адрес сайта в браузере</label>
+            <label><input type="radio" name="q4" value="C"> Количество рекламы на странице</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>5. 👥 К тебе в друзья в соцсети добавляется незнакомый человек с фото симпатичного сверстника. Что сделаешь?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="A"> Приму запрос и начну общение</label>
+            <label><input type="radio" name="q5" value="B"> Отклоню запрос</label>
+            <label><input type="radio" name="q5" value="C"> Спрошу, откуда он меня знает</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>6. 🎮 В игровом чате тебя оскорбляют. Как правильно поступить?</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="A"> Оскорбить в ответ</label>
+            <label><input type="radio" name="q6" value="B"> Пожаловаться модераторам и заблокировать обидчика</label>
+            <label><input type="radio" name="q6" value="C"> Ничего не делать, само пройдет</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>7. 📱 Ты нашел в школе чужой телефон. Как безопасно вернуть его владельцу?</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="A"> Посмотреть контакты и позвонить родным</label>
+            <label><input type="radio" name="q7" value="B"> Отнести учителю или в администрацию</label>
+            <label><input type="radio" name="q7" value="C"> Поиграть в игры и положить обратно</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>8. 💳 Тебе пришло SMS: "Ваша карта заблокирована. Перейдите по ссылке для разблокировки". Что сделаешь?</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="A"> Немедленно перейду по ссылке</label>
+            <label><input type="radio" name="q8" value="B"> Покажу SMS родителям</label>
+            <label><input type="radio" name="q8" value="C"> Удалю сообщение</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>9. 🖥️ Твой друг просит дать ему свой аккаунт для игры. Как поступишь?</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="A"> Дам, он же друг</label>
+            <label><input type="radio" name="q9" value="B"> Откажусь, но помогу зарегистрировать свой аккаунт</label>
+            <label><input type="radio" name="q9" value="C"> Дам, но потом поменяю пароль</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>10. 🆘 Ты случайно перешел на странный сайт с пугающим контентом. Что сделаешь?</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="A"> Закрою страницу и никому не скажу</label>
+            <label><input type="radio" name="q10" value="B"> Расскажу родителям или учителю</label>
+            <label><input type="radio" name="q10" value="C"> Поделюсь ссылкой с друзьями</label>
+        </div>
+    </div>
+    
+    <button type="button" id="check-test">Проверить результаты</button>
+</form>
         
         <div class="result" id="result">
             <h3>🎯 Твой результат: <span id="score">0</span>/10</h3>
@@ -103,17 +165,9 @@
 
     <script>
         const correctAnswers = {
-            q1: "B",
-            q2: "B",
-            q3: "C",
-            q4: "A",
-            q5: "B",
-            q6: "A",
-            q7: "C",
-            q8: "B",
-            q9: "A",
-            q10: "C"
-        };
+    q1: "B", q2: "C", q3: "C", q4: "B", q5: "B", 
+    q6: "B", q7: "B", q8: "B", q9: "B", q10: "B"
+};
 
         document.getElementById('check-test').addEventListener('click', function() {
             let score = 0;
