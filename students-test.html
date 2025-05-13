@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎒 Тест по безопасности для школьников</title>
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        button {
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .result {
+            display: none;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .progress-bar {
+            height: 10px;
+            background: #ecf0f1;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .progress {
+            height: 100%;
+            background: #27ae60;
+            border-radius: 5px;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка и навигация -->
 
+    <main class="test-container">
+        <h1>🎒 Тест по безопасности для школьников</h1>
+        <p>Проверь свои знания о безопасном поведении в интернете!</p>
+        
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Что нужно сделать, если тебе пришло сообщение от незнакомца с подозрительной ссылкой?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> Перейти по ссылке из любопытства</label>
+                    <label><input type="radio" name="q1" value="B"> Удалить сообщение и не отвечать</label>
+                    <label><input type="radio" name="q1" value="C"> Отправить ссылку друзьям</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>2. Какой пароль самый надежный?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> 123456</label>
+                    <label><input type="radio" name="q2" value="B"> Шк0ла#2023!</label>
+                    <label><input type="radio" name="q2" value="C"> qwerty</label>
+                </div>
+            </div>
+            
+            <!-- Остальные вопросы -->
+            <div class="question">
+                <p>10. Что делать, если тебя обижают в интернете?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> Обидеть в ответ</label>
+                    <label><input type="radio" name="q10" value="B"> Никому не говорить</label>
+                    <label><input type="radio" name="q10" value="C"> Рассказать родителям или учителю</label>
+                </div>
+            </div>
+            
+            <button type="button" id="check-test">Проверить результаты</button>
+        </form>
+        
+        <div class="result" id="result">
+            <h3>🎯 Твой результат: <span id="score">0</span>/10</h3>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="result-message"></p>
+        </div>
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: "B",
+            q2: "B",
+            q3: "C",
+            q4: "A",
+            q5: "B",
+            q6: "A",
+            q7: "C",
+            q8: "B",
+            q9: "A",
+            q10: "C"
+        };
+
+        document.getElementById('check-test').addEventListener('click', function() {
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = form.elements[`q${i}`].value;
+                if (selected === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+            
+            const percent = (score / 10) * 100;
+            document.getElementById('score').textContent = score;
+            document.getElementById('progress').style.width = `${percent}%`;
+            
+            const resultMessage = document.getElementById('result-message');
+            if (score < 4) {
+                resultMessage.textContent = "⚠️ Тебе нужно больше узнать о безопасности в интернете! Попроси родителей или учителя помочь тебе разобраться в этих вопросах.";
+                document.getElementById('progress').style.background = "#e74c3c";
+            } else if (score < 8) {
+                resultMessage.textContent = "🔍 Ты знаешь основы, но есть куда расти! Обрати внимание на вопросы, где ты ошибся.";
+                document.getElementById('progress').style.background = "#f39c12";
+            } else {
+                resultMessage.textContent = "✅ Отличный результат! Ты хорошо разбираешься в безопасности в интернете.";
+                document.getElementById('progress').style.background = "#27ae60";
+            }
+            
+            document.getElementById('result').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    </script>
+</body>
+</html>
