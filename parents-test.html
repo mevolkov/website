@@ -172,3 +172,37 @@
     };
     // Аналогичная логика проверки
 </script>
+
+document.getElementById('check-test').addEventListener('click', function() {
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = form.elements[`q${i}`].value;
+                if (selected === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+            
+            const percent = (score / 10) * 100;
+            document.getElementById('score').textContent = score;
+            document.getElementById('progress').style.width = `${percent}%`;
+            
+            const resultMessage = document.getElementById('result-message');
+            if (score < 4) {
+                resultMessage.textContent = "⚠️ Вам нужно больше узнать о безопасности в интернете! Попросите ответственного за инфлормационную безопасность помочь вам разобраться в этих вопросах.";
+                document.getElementById('progress').style.background = "#e74c3c";
+            } else if (score < 8) {
+                resultMessage.textContent = "🔍 Вы знаете основы, но есть куда расти! Обратите внимание на вопросы, где вы ошиблись.";
+                document.getElementById('progress').style.background = "#f39c12";
+            } else {
+                resultMessage.textContent = "✅ Отличный результат! Вы хорошо разбираетесь в информационной безопасности.";
+                document.getElementById('progress').style.background = "#27ae60";
+            }
+            
+            document.getElementById('result').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    </script>
+</body>
+</html>
