@@ -2,46 +2,182 @@
 <html lang="ru">
 <head>
     <!-- метатеги и стили -->
-    <title>👩‍🏫 Чек-лист по безопасности для педагогов</title>
+    <title>🎒 Чек-лист по безопасности для школьников</title>
+    <style>
+        .checklist {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist-item input {
+            margin-right: 15px;
+            transform: scale(1.5);
+        }
+        .result-panel {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+        .progress-bar {
+            height: 10px;
+            background: #ecf0f1;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .progress {
+            height: 100%;
+            background: #27ae60;
+            border-radius: 5px;
+            width: 0%;
+        }
+    </style>
 </head>
 <body>
     <!-- шапка и навигация -->
 
     <main>
-        <h1>👩‍🏫 Чек-лист по безопасности для педагогов</h1>
-        <p>Проверьте, насколько ваша школа защищает данные учащихся</p>
+        <h1>🎒 Чек-лист по безопасности для школьников</h1>
+        <p>Пройди проверку и узнай, насколько ты защищён в интернете!</p>
         
-        <div class="checklist">
-            <div class="checklist-item">
-                <input type="checkbox" id="item1">
-                <label for="item1">📝 В школе есть политика обработки персональных данных</label>
+       <div class="checklist">
+    <div class="checklist-item">
+        <input type="checkbox" id="item1">
+        <label for="item1">🔒 Я использую разные пароли для важных аккаунтов (почта, соцсети)</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item2">
+        <label for="item2">📱 На моём телефоне установлен пароль/графический ключ</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item3">
+        <label for="item3">👀 Я не перехожу по подозрительным ссылкам из сообщений</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item4">
+        <label for="item4">📸 Я не отправляю личные фото незнакомым людям</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item5">
+        <label for="item5">👥 В соцсетях у меня настроена приватность профиля</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item6">
+        <label for="item6">🚫 Я не сообщаю никому свои пароли, даже друзьям</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item7">
+        <label for="item7">🔍 Я проверяю адреса сайтов перед вводом логина/пароля</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item8">
+        <label for="item8">📛 Я не участвую в опасных интернет-челленджах</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item9">
+        <label for="item9">🤐 Я не распространяю личную информацию о других без разрешения</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item10">
+        <label for="item10">🔄 Я регулярно обновляю приложения и операционную систему</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item11">
+        <label for="item11">📧 Я не открываю вложения из писем от незнакомцев</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item12">
+        <label for="item12">👨‍💻 Я использую антивирус на своих устройствах</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item13">
+        <label for="item13">🚨 Я знаю, как заблокировать обидчика в соцсетях</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item14">
+        <label for="item14">🗑️ Я не сохраняю пароли в браузере</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item15">
+        <label for="item15">📅 Я делаю резервные копии важных файлов</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item16">
+        <label for="item16">👂 Я рассказываю родителям о странных ситуациях в интернете</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item17">
+        <label for="item17">📲 Я не скачиваю приложения из ненадёжных источников</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item18">
+        <label for="item18">💰 Я не ввожу данные карт родителей без разрешения</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item19">
+        <label for="item19">👮 Я знаю, что делать, если взломали мой аккаунт</label>
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox" id="item20">
+        <label for="item20">🆘 Я знаю, куда обратиться, если столкнусь с угрозами в сети</label>
+    </div>
+</div>
+        
+        <button id="check-results" style="padding: 12px 24px; background: #3498db; color: white; border: none; border-radius: 4px; font-size: 16px; margin: 20px 0; cursor: pointer;">
+            🎯 Проверить результаты
+        </button>
+        
+        <div class="result-panel" id="result-panel">
+            <h3>🎯 Твой уровень безопасности: <span id="result-percent">0</span>%</h3>
+            <div class="progress-bar">
+                <div class="progress" id="progress-bar"></div>
             </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="item2">
-                <label for="item2">🔐 Учётные записи сотрудников защищены надёжными паролями</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="item3">
-                <label for="item3">👨‍🎓 Мы проводим уроки по цифровой грамотности</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="item4">
-                <label for="item4">🚨 В школе есть алгоритм действий при кибербуллинге</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="item5">
-                <label for="item5">💻 Школьные компьютеры защищены антивирусами</label>
-            </div>
-            <!-- продолжение списка до 20 пунктов -->
-            <div class="checklist-item">
-                <input type="checkbox" id="item20">
-                <label for="item20">📢 Мы регулярно информируем родителей о цифровых угрозах</label>
-            </div>
+            <p id="result-message"></p>
         </div>
-        
-        <!-- Кнопка и блок результатов как в предыдущем примере -->
     </main>
 
-    <!-- Скрипт для подсчёта результатов -->
+    <script>
+        document.getElementById('check-results').addEventListener('click', function() {
+            const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+            let checkedCount = 0;
+            
+            checkboxes.forEach(checkbox => {
+                if(checkbox.checked) checkedCount++;
+            });
+            
+            const percent = Math.round((checkedCount / checkboxes.length) * 100);
+            const resultPanel = document.getElementById('result-panel');
+            const progressBar = document.getElementById('progress-bar');
+            const resultPercent = document.getElementById('result-percent');
+            const resultMessage = document.getElementById('result-message');
+            
+            resultPercent.textContent = percent;
+            progressBar.style.width = percent + '%';
+            
+            if(percent < 30) {
+                resultMessage.textContent = '⚠️ Твой уровень безопасности очень низкий! Срочно прими меры по защите своих данных.';
+                progressBar.style.background = '#e74c3c';
+            } else if(percent < 70) {
+                resultMessage.textContent = '🔍 Ты на правильном пути, но есть куда расти! Обрати внимание на непроставленные галочки.';
+                progressBar.style.background = '#f39c12';
+            } else {
+                resultMessage.textContent = '✅ Отличный результат! Ты хорошо защищён в интернете, но не забывай о безопасности.';
+                progressBar.style.background = '#27ae60';
+            }
+            
+            resultPanel.style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    </script>
 </body>
 </html>
