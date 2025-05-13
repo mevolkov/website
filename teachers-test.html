@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎒 Тест по безопасности для школьников</title>
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        button {
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .result {
+            display: none;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .progress-bar {
+            height: 10px;
+            background: #ecf0f1;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .progress {
+            height: 100%;
+            background: #27ae60;
+            border-radius: 5px;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка и навигация -->
+
+    <main class="test-container">
+        <h1>🎒 Тест по безопасности для школьников</h1>
+        <p>Проверь свои знания о безопасном поведении в интернете!</p>
+        
+        <form id="quiz-form">
+    <div class="question">
+        <p>1. 📝 Можно ли публиковать на школьном сайте фото детей с указанием ФИО?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="A"> Да, если фото хорошие</label>
+            <label><input type="radio" name="q1" value="B"> Только с письменного согласия родителей</label>
+            <label><input type="radio" name="q1" value="C"> Да, если дети не против</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>2. 🔐 Как часто нужно менять пароли от школьных систем?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="A"> Раз в год</label>
+            <label><input type="radio" name="q2" value="B"> Раз в квартал</label>
+            <label><input type="radio" name="q2" value="C"> Никогда, если пароль сложный</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>3. 🚨 Ученик сообщил, что стал жертвой кибербуллинга. Ваши действия?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="A"> Посоветую не обращать внимания</label>
+            <label><input type="radio" name="q3" value="B"> Зафиксирую факт, сообщу администрации и школьному психологу</label>
+            <label><input type="radio" name="q3" value="C"> Сам(а) поговорю с обидчиками</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>4. 💻 Можно ли использовать личные флешки на школьных компьютерах?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="A"> Да, без ограничений</label>
+            <label><input type="radio" name="q4" value="B"> Только после проверки антивирусом</label>
+            <label><input type="radio" name="q4" value="C"> Нет, это запрещено</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>5. 📧 Ученик прислал вам подозрительный файл. Как поступите?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="A"> Открою из любопытства</label>
+            <label><input type="radio" name="q5" value="B"> Удалю и проведу беседу о кибербезопасности</label>
+            <label><input type="radio" name="q5" value="C"> Перешлю IT-специалисту школы</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>6. 👨‍🎓 Как часто вы проводите уроки по цифровой грамотности?</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="A"> Никогда</label>
+            <label><input type="radio" name="q6" value="B"> Раз в четверть</label>
+            <label><input type="radio" name="q6" value="C"> Включаю элементы в обычные уроки</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>7. 📱 Разрешаете ли вы ученикам использовать телефоны на уроках?</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="A"> Да, без ограничений</label>
+            <label><input type="radio" name="q7" value="B"> Только в учебных целях</label>
+            <label><input type="radio" name="q7" value="C"> Полностью запрещаю</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>8. 🏫 Как школа защищает персональные данные учащихся?</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="A"> Никак, это не важно</label>
+            <label><input type="radio" name="q8" value="B"> Есть ответственный и политика обработки данных</label>
+            <label><input type="radio" name="q8" value="C"> Храним данные в закрытом шкафу</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>9. 🚸 Что делать, если заметили подозрительную активность в школьной сети?</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="A"> Ничего</label>
+            <label><input type="radio" name="q9" value="B"> Сообщить системному администратору</label>
+            <label><input type="radio" name="q9" value="C"> Самому попытаться устранить</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>10. 🆘 Где в школе можно получить информацию по кибербезопасности?</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="A"> Нигде</label>
+            <label><input type="radio" name="q10" value="B"> У ответственного за информационную безопасность</label>
+            <label><input type="radio" name="q10" value="C"> В библиотеке есть материалы</label>
+        </div>
+    </div>
+    
+    <button type="button" id="check-test">Проверить результаты</button>
+</form>
+        
+        <div class="result" id="result">
+            <h3>🎯 Твой результат: <span id="score">0</span>/10</h3>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="result-message"></p>
+        </div>
+    </main>
+
+    <script>
+        const correctAnswers = {
+    q1: "B", q2: "C", q3: "C", q4: "B", q5: "B", 
+    q6: "B", q7: "B", q8: "B", q9: "B", q10: "B"
+};
+
+        document.getElementById('check-test').addEventListener('click', function() {
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = form.elements[`q${i}`].value;
+                if (selected === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+            
+            const percent = (score / 10) * 100;
+            document.getElementById('score').textContent = score;
+            document.getElementById('progress').style.width = `${percent}%`;
+            
+            const resultMessage = document.getElementById('result-message');
+            if (score < 4) {
+                resultMessage.textContent = "⚠️ Тебе нужно больше узнать о безопасности в интернете! Попроси родителей или учителя помочь тебе разобраться в этих вопросах.";
+                document.getElementById('progress').style.background = "#e74c3c";
+            } else if (score < 8) {
+                resultMessage.textContent = "🔍 Ты знаешь основы, но есть куда расти! Обрати внимание на вопросы, где ты ошибся.";
+                document.getElementById('progress').style.background = "#f39c12";
+            } else {
+                resultMessage.textContent = "✅ Отличный результат! Ты хорошо разбираешься в безопасности в интернете.";
+                document.getElementById('progress').style.background = "#27ae60";
+            }
+            
+            document.getElementById('result').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    </script>
+</body>
+</html>
 
